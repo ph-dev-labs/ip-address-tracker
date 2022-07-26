@@ -10,7 +10,7 @@ const SearchField = () => {
             marginTop: "73px",
             backgroundColor:"#fff",
             borderRadius: "10px"
-        }} />
+        }}/>
         
    )
 }
