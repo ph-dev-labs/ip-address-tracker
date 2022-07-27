@@ -2,11 +2,12 @@ import React from "react";
 import SearchField from "../SearchField/SearchField.component";
 import ReactComponent from "../../images/pattern-bg.png"
 import { Container } from "@mui/system";
-import { Box, Typography } from "@mui/material";
+import { Box, Typography, Button} from "@mui/material";
 
 
-const Header = () => {
-   
+
+const Header = ({onChange}) => {
+    
     return(
         <Container>
             <Box sx={{
@@ -21,7 +22,10 @@ const Header = () => {
                     marginTop : "20px"
                 }}>IP Address Tracker</Typography>
                 <img src={ReactComponent} alt="Header" className="image" />
-                <SearchField />
+                <div className="search-btn">
+                  <SearchField onChange={onChange}/>
+                  <Button type="submit" variant="contained" color="primary">search</Button>
+                </div>
             </Box>
         </Container>
     )
