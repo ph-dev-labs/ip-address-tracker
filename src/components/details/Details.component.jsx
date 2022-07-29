@@ -5,7 +5,7 @@ import React from "react";
 
 const Details = ({data}) => {
     const {ip, location, isp} = data
-    const {timezone, country} = location
+    const {timezone, city} = location
     
     return (
         <Box sx={{
@@ -51,7 +51,7 @@ const Details = ({data}) => {
                  fontWeight: "Bold",
                  position: "absolute"
                }}>
-                {country}
+                {city}
                </Typography>
 
             </div>

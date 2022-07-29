@@ -3,6 +3,7 @@ import React from "react";
 import Header from "../header/Header.component";
 import Container from '@mui/material/Container';
 import Details from "../details/Details.component";
+import Map from "../map/map.component";
 import { useGetDetailsQuery } from "../../redux/IP-addressApi";
 import { useState} from "react";
  
@@ -26,6 +27,7 @@ const Main = () => {
         <Container>
             <Header onChange={onChange} />
             <Details data={data}/>
+            <Map data={data}/>
         </Container>
     )
 }
