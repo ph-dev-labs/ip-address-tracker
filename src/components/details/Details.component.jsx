@@ -1,7 +1,12 @@
 import { Box, Typography } from "@mui/material";
 import React from "react";
 
-const Details = () => {
+
+
+const Details = ({data}) => {
+    const {ip, location, isp} = data
+    const {timezone, country} = location
+    
     return (
         <Box sx={{
             display: "flex",
@@ -16,69 +21,78 @@ const Details = () => {
             position: "absolute",
             transform: "translateY(-50px)"
         }}>
-            <div className="">
+           
+            <div className="detail-container">
                 <Typography variant="p" component="h6" sx={{
-                    color: "hsl(0, 0%, 59%)"
+                    color: "hsl(0, 0%, 59%)",
                 }}>
                     IP ADDRESS
                </Typography>
                <Typography variant="h6" component="p" sx={{
                  color: "hsl(0, 0%, 17%)",
-                 fontSize: "18px",
-                 fontWeight: "Bold"
+                 fontSize: "14px",
+                 fontWeight: "Bold",
+                 position: "absolute"
                }}>
-                1.444.444.34
+                {ip}
                </Typography>
             </div>
 
-            <div className="">
+            <div className="detail-container">
                 <Typography variant="p" component="h6" sx={{
-                    color: "hsl(0, 0%, 59%)"
+                    color: "hsl(0, 0%, 59%)",
+                    
                 }}>
-                    LOCATION
+                    location
                </Typography>
                <Typography variant="h6" component="p" sx={{
                  color: "hsl(0, 0%, 17%)",
-                 fontSize: "18px",
-                 fontWeight: "Bold"
+                 fontSize: "14px",
+                 fontWeight: "Bold",
+                 position: "absolute"
                }}>
-                1.444.444.34
+                {country}
                </Typography>
 
             </div>
 
-            <div className="">
+            <div className="detail-container">
                 <Typography variant="p" component="h6" sx={{
-                    color: "hsl(0, 0%, 59%)"
+                    color: "hsl(0, 0%, 59%)",
+                    
                 }}>
                     TIMEZONE
                </Typography>
                <Typography variant="h6" component="p" sx={{
                  color: "hsl(0, 0%, 17%)",
-                 fontSize: "18px",
-                 fontWeight: "Bold"
+                 fontSize: "14px",
+                 fontWeight: "Bold",
+                 position: "absolute"
                }}>
-                1.444.444.34
+                {timezone}
                </Typography>
             </div>
 
-            <div className="" >
+            <div className="detail-container" >
                 <Typography variant="p" component="h6" sx={{
-                    color: "hsl(0, 0%, 59%)"
+                    color: "hsl(0, 0%, 59%)",
                 }}>
                     ISP
                </Typography>
-               <Typography variant="h6" component="p" sx={{
+               <Typography variant="h6" component="p" noWrap={false} sx={{
                  color: "hsl(0, 0%, 17%)",
-                 fontSize: "18px",
-                 fontWeight: "Bold"
+                 fontSize: "15px",
+                 fontWeight: "Bold",
+                 position: "absolute"
+                 
                }}>
-                1.444.444.34
+                {isp}
                </Typography>
             </div>
     
         </Box>
     )
+        
 }
 
 export default Details;

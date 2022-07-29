@@ -1,9 +1,10 @@
+/* eslint-disable array-callback-return */
 import React from "react";
 import Header from "../header/Header.component";
 import Container from '@mui/material/Container';
 import Details from "../details/Details.component";
 import { useGetDetailsQuery } from "../../redux/IP-addressApi";
-import { useState, useEffect } from "react";
+import { useState} from "react";
  
 
 const Main = () => {
@@ -19,14 +20,12 @@ const Main = () => {
    
 
    const {data} = useGetDetailsQuery(ipAddress)
-   console.log(data)
-
-
-   
+   console.log(data) 
+     if(data)
     return (
         <Container>
             <Header onChange={onChange} />
-            <Details />
+            <Details data={data}/>
         </Container>
     )
 }
