@@ -6,8 +6,7 @@ const Map = ({data}) => {
     const{lat, lng} = data.location
     return (
         <Container className="map" sx={{
-            width: "500px",
-            height: "100%",
+            position: "relative"
             
         }}>
             <MapContainer center={[lat, lng]} zoom={13} scrollWheelZoom={true}>

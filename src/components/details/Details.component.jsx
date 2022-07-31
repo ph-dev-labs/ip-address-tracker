@@ -19,8 +19,8 @@ const Details = ({data}) => {
             marginBottom: "30px",
             backgroundColor: "#fff",
             position: "absolute",
-            transform: "translateY(-50px)"
-        }}>
+            transform: "translateY(-50px)",
+        }} className="zindex" >
            
             <div className="detail-container">
                 <Typography variant="p" component="h6" sx={{

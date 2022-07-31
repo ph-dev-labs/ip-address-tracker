@@ -1,1 +1,36 @@
+.leaflet-container {
+    width: 81vw;
+    height: 100vh;
+    position: relative;
+    margin-bottom: 100px;
+    overflow: hidden;
+}
+body {
+    font-family: "Roboto";
+}
 
+.image {
+    width: 100%;
+    height: 200px;
+}
+
+.search-btn {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 70px;
+}
+.detail-container {
+    margin-bottom: 80px;
+}
+
+.zindex {
+    z-index: 1000;
+}
+
+.cont {
+    display: flex;
+    flex-direction: row;
+}
