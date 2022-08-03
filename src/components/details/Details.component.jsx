@@ -30,7 +30,7 @@ const Details = ({data}) => {
                </Typography>
                <Typography variant="h6" component="p" sx={{
                  color: "hsl(0, 0%, 17%)",
-                 fontSize: "14px",
+                 fontSize: "13px",
                  fontWeight: "Bold",
                  position: "absolute"
                }}>
@@ -47,7 +47,7 @@ const Details = ({data}) => {
                </Typography>
                <Typography variant="h6" component="p" sx={{
                  color: "hsl(0, 0%, 17%)",
-                 fontSize: "14px",
+                 fontSize: "13px",
                  fontWeight: "Bold",
                  position: "absolute"
                }}>
@@ -65,7 +65,7 @@ const Details = ({data}) => {
                </Typography>
                <Typography variant="h6" component="p" sx={{
                  color: "hsl(0, 0%, 17%)",
-                 fontSize: "14px",
+                 fontSize: "13px",
                  fontWeight: "Bold",
                  position: "absolute"
                }}>
@@ -81,9 +81,10 @@ const Details = ({data}) => {
                </Typography>
                <Typography variant="h6" component="p" noWrap={false} sx={{
                  color: "hsl(0, 0%, 17%)",
-                 fontSize: "15px",
+                 fontSize: "13px",
                  fontWeight: "Bold",
-                 position: "absolute"
+                 position: "absolute",
+                 marginRight: "10px"
                  
                }}>
                 {isp}

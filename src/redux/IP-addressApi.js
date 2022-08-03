@@ -9,10 +9,13 @@ export const ipAddressApi = createApi({
     reducerPath: "ipAddressApi",
     baseQuery: fetchBaseQuery({baseUrl}),
     endpoints: (builder) => ({
-        getDetails: builder.query({
-           query: (ipAddress) => `/api/v2/country,city?apiKey=${apiKey}&ipAddress=${ipAddress}`,  
+        getIp: builder.query({
+           query: () => `/api/v2/country,city?apiKey=${apiKey}`,  
+        }),
+        getInputIp: builder.query({
+            query: (ip) => `/api/v2/country,city?apiKey=${apiKey}&ipAddress=${ip}`
         })
     })
 })
 
-export const { useGetDetailsQuery} = ipAddressApi
+export const { useGetIpQuery, useGetInputIpQuery} = ipAddressApi
